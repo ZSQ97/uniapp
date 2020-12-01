@@ -13,7 +13,7 @@
 			    <view class='login-user'>
 			      <!-- <text class='user-text'>密码</text> -->
 						<uni-icons type="locked" size="30"></uni-icons>
-						<input type="text" v-model="userPwd" value="" placeholder="6-16位字符"/>
+						<input type="password" v-model="userPwd" value="" placeholder="6-16位字符"/>
 			    <text class="forget">忘记密码</text></view>
 			</view>
 		</view>
@@ -34,12 +34,18 @@
 		},
 		methods: {
 			go_Home(){
-				uni.redirectTo({
-					url: './../index/index',
-					success: res => {console.log(res,this.userPwd)},
-					fail: (error) => {console.log(this.userName,error)},
-					complete: () => {}
-				});
+				if(this.userName=="123"&&this.userPwd=="123456"){
+				// 	uni.redirectTo({
+				// 	url: './../index/index',
+				// 	success: res => {console.log(res,this.userPwd)},
+				// 	fail: (error) => {console.log(this.userName,error)},
+				// 	complete: () => {}
+				// });
+					uni.switchTab({
+						url: '/pages/index/index',
+					})
+				}
+				
 			}
 		},
 		components:{
