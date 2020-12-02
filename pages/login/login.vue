@@ -14,7 +14,13 @@
 			      <!-- <text class='user-text'>密码</text> -->
 						<uni-icons type="locked" size="30"></uni-icons>
 						<input type="password" v-model="userPwd" value="" placeholder="6-16位字符"/>
-			    <text class="forget">忘记密码</text></view>
+			    </view>
+					<view class="forget">
+						
+						<view class="tst">
+							<text>忘记密码</text>
+						</view>
+					</view>
 			</view>
 		</view>
 		<view class="login_foot">
@@ -81,7 +87,7 @@
 			align-items: center;
 			.login-user{
 				width: 90%;
-				height: 90rpx;
+				height: 90upx;
 				border: 1px solid #C0C0C0;
 				font-size: 24px;
 				margin: 5px 0 0 0;
@@ -96,12 +102,31 @@
 				}
 			}
 			.forget{
-				font-size: 16px;
-				// position: absolute;
-				// bottom:0;
-				margin: 150upx 0 0 0;
-				color: #C0C0C0;
+				width: 100%;
+				height: 90upx;
+				// background: red;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				.tst{
+					width: 90%;
+					height: 90upx;
+					// background-color: blue;
+					font-size: 16px;
+					color: #C0C0C0;
+					text{
+						float: right;
+						line-height: 90upx;
+					}
+				}
 			}
+			// .forget{
+			// 	
+			// 	// position: absolute;
+			// 	// bottom:0;
+			// 	margin: 150upx 0 0 0;
+			// 	color: #C0C0C0;
+			// }
 			// .forget:hover{
 			// 	color: #000;
 			// }
@@ -110,8 +135,6 @@
 	.login_foot{
 		width: 90%;
 		height: 5rem;
-		// background: red;
-		// margin: 0 ;
 		padding: 0 5%;
 	}
 }
